@@ -1,0 +1,1 @@
+java -Xmx256M -Dsbt.log.noformat=true  -jar `dirname $0`/sbt-launch.jar "$@"

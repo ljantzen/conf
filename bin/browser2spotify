@@ -1,0 +1,3 @@
+#!/bin/sh
+exec wine "C:\\Programfiler\\Spotify\\spotify.exe" /uri "$@"
+

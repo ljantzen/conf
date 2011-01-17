@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+VERSION='0.1.0'
+CH_SHEETS=${CH_SHEETS:-$HOME/.ch-sheets}
+CH_REPO=${CH_REPO:-git://github.com/visionmedia/ch-sheets.git}
+CH_ORIGIN=${CH_ORIGIN:-git://github.com/visionmedia/ch.git}
+
+if [ -d $CH_SHEETS ]; then
+  if [ $1 ]; then
+    case $1 in
+      -v|--version)
+        echo "ch $VERSION"
+        ;;
+      help|-h|--help)
+        echo 'usage: ch ch'
+        echo '       ch [search|find|list] [sheet]'
+        echo '       ch locate [sheet]'
+        echo '       ch read <sheet>'
+        echo '       ch update [self]'
+        echo '       ch [-v|--version] '
+        ;;
+      locate)
+        if [ $2 ]; then
+          find $CH_SHEETS -name *$2*.sheet -type f
+        else
+          find $CH_SHEETS -name *.sheet -type f
+        fi
+        ;;
+      search|find|list)
+        ch locate $2 | sed 's|.*\/\(.*\)\.sheet|\1|g' | sort
+        ;;
+      read)
+        find $CH_SHEETS -name $2.sheet -type f | xargs cat | less 
+        ;;
+      update)
+        if [ "$2" == 'self' ]; then
+          cd /tmp && git clone $CH_ORIGIN && 
+          cd ch && sudo make install && 
+          echo -n 'Updated to ' && ch -v
+        else
+          cd $CH_SHEETS
+          git pull origin master 2> /dev/null
+        fi
+        ;;
+      *)
+        ch find $1 | head -n 1 | awk "{ print \"$CH_SHEETS/\" \$1 \".sheet\" }" | xargs cat | less
+        ;;
+    esac
+  else
+    ch ch
+  fi
+else
+  git clone $CH_REPO $CH_SHEETS &&
+  echo Initialized cheat sheets at $CH_SHEETS
+  ch $1
+fi
+
+

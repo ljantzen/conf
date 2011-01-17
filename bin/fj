@@ -1,0 +1,37 @@
+#!/bin/bash 
+if [ "$1" == "" ] ; then 
+  echo "usage: fj <pattern>
+       fj <dir> <pattern>"
+  exit
+fi 
+
+if [ "$2" == "" ] ; then 
+        class=$1
+        dir="."
+else 
+        class=$2
+        dir=$1
+fi
+
+
+find $dir -type f -name "*.jar" | xargs -n1 -i -t jar tvf '{}' 2>&1 | awk -v s=$class '
+BEGIN {
+   searchpattern=s
+}
+
+/^jar/ { jarfile=$3 }
+
+/\.class$/{ 
+   if ($8 ~ searchpattern ) {
+       print jarfile ": " $1 "\t" $8 
+  #     matching_archives[length(matching_archives)]=jarfile 
+   }
+
+}
+
+END {
+  #max=length(matching_archives)
+  #for (x = 1; x <= max; x++)
+  #   print matching_archives[x]
+}
+' 
