@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UFRaw Version='7'>
+<WindowMaximized>1</WindowMaximized>
+<Interpolation>bilinear</Interpolation>
+<ColorSmoothing>1</ColorSmoothing>
+<WB>Manual WB</WB>
+<Temperature>5336</Temperature>
+<Green>1.119229</Green>
+<ChannelMultipliers>1.870014 1.000000 1.307734</ChannelMultipliers>
+<Exposure>-0.873967</Exposure>
+<RestoreDetails>hsv</RestoreDetails>
+<ClipHighlights>film</ClipHighlights>
+<Saturation>1.510490</Saturation>
+<OutputType>4</OutputType>
+<ProgressiveJPEG>1</ProgressiveJPEG>
+<Compression>70</Compression>
+<BaseManualCurve Current='yes'>
+	<AnchorXY>0.000000 0.000000</AnchorXY>
+	<AnchorXY>0.345098 0.423529</AnchorXY>
+	<AnchorXY>1.000000 1.000000</AnchorXY>
+</BaseManualCurve>
+<ManualCurve Current='yes'>
+</ManualCurve>
+<NoInputProfile Current='yes'>No profile
+</NoInputProfile>
+<MatrixInputProfile Current='no'>Color matrix
+	<Gamma>0.208000</Gamma>
+</MatrixInputProfile>
+<sRGBOutputProfile Current='yes'>sRGB
+</sRGBOutputProfile>
+<SystemDisplayProfile Current='yes'>System default
+</SystemDisplayProfile>
+<Make>NIKON</Make>
+<Model>D200</Model>
+</UFRaw>

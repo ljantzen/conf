@@ -1,0 +1,5 @@
+--type-set=props=.properties
+--type-set=log=.log
+--type-set=scala=.scala
+--type-set=jad=.jad
+

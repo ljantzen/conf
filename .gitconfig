@@ -1,0 +1,20 @@
+[user]
+	name = Leif Jantzen
+	email = ljantzen@gmail.com
+[github]
+	user = ljantzen
+	token = d9cf7bac2f8cf27038d1ba31a4aeaafa
+[color]
+    ui = true
+    diff = auto
+    status = auto
+    branch = auto
+[alias]
+    ci = commit  
+    ca = commit -a -m 
+    st = status -u
+    co = checkout
+    rv = reset --hard HEAD
+    pu = "!git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+    lg = log --topo-order --decorate --first-parent
+    nofetch = fetch --dry-run
