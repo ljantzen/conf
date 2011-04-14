@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <UFRaw Version='7'>
 <WindowMaximized>1</WindowMaximized>
-<Interpolation>bilinear</Interpolation>
-<ColorSmoothing>1</ColorSmoothing>
-<WB>Manual WB</WB>
-<Temperature>5336</Temperature>
-<Green>1.119229</Green>
-<ChannelMultipliers>1.870014 1.000000 1.307734</ChannelMultipliers>
-<Exposure>-0.873967</Exposure>
+<ColorSmoothing>3</ColorSmoothing>
+<Temperature>3552</Temperature>
+<Green>1.169382</Green>
+<ChannelMultipliers>1.308594 1.000000 1.949219</ChannelMultipliers>
+<Exposure>1.000000</Exposure>
 <RestoreDetails>hsv</RestoreDetails>
 <ClipHighlights>film</ClipHighlights>
 <Saturation>1.510490</Saturation>
 <OutputType>4</OutputType>
+<CreateID>2</CreateID>
 <ProgressiveJPEG>1</ProgressiveJPEG>
 <Compression>70</Compression>
 <BaseManualCurve Current='yes'>

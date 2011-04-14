@@ -52,6 +52,7 @@ alias vi=vim
 alias go=gnome-open
 alias Z='z && ls'
 alias q='qgit --all &'
+alias pk='pkill -f'
 
 export EDITOR=vim
 
@@ -73,6 +74,13 @@ export PATH=$PATH:$JBOSS_HOME/bin
 
 export SOAPUI_HOME=/home/leif/apps/soapui
 export PATH=$PATH:$SOAPUI_HOME/bin
+
+export SCALA_HOME=/opt/scala/current
+export PATH=$PATH:$SCALA_HOME/bin
+
+
+export PLAY_HOME=/home/leif/dev/play/play-1.1/
+export PATH=$PLAY_HOME:$PATH
 
 export CDPATH=.:~:
 export HISTIGNORE="&:ls:[bf]g:exit" 

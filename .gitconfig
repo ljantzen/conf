@@ -12,9 +12,11 @@
 [alias]
     ci = commit  
     ca = commit -a -m 
-    st = status -u
+    st = status -u -s
     co = checkout
     rv = reset --hard HEAD
     pu = "!git fetch origin -v; git fetch upstream -v; git merge upstream/master"
     lg = log --topo-order --decorate --first-parent
     nofetch = fetch --dry-run
+[diff]
+    external=diff.py
