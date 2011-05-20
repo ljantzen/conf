@@ -18,5 +18,7 @@
     pu = "!git fetch origin -v; git fetch upstream -v; git merge upstream/master"
     lg = log --topo-order --decorate --first-parent
     nofetch = fetch --dry-run
+	unstage = reset HEAD --
+	pop = "stash pop "
 [diff]
     external=diff.py

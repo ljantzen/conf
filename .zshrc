@@ -79,7 +79,7 @@ export SCALA_HOME=/opt/scala/current
 export PATH=$PATH:$SCALA_HOME/bin
 
 
-export PLAY_HOME=/home/leif/dev/play/play-1.1/
+export PLAY_HOME=/home/leif/dev/play/current
 export PATH=$PLAY_HOME:$PATH
 
 export CDPATH=.:~:
@@ -214,17 +214,9 @@ function m2 {
   
   if [[ "$1" == "" ]] ; then 
     ls -l $HOME/.m2/settings.xml
-  fi 
-
-  if [[ "$1" == "home" ]] ; then  
+  else
      rm $HOME/.m2/settings.xml
-     ln -s $HOME/.m2/home.xml $HOME/.m2/settings.xml
+     ln -s $HOME/.m2/$1.xml $HOME/.m2/settings.xml
   fi 
-
-  if [[ "$1" == "bk" ]] ; then  
-     rm $HOME/.m2/settings.xml
-     ln -s $HOME/.m2/bk.xml $HOME/.m2/settings.xml
-  fi 
-
 }
 
