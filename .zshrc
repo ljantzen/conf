@@ -23,7 +23,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.git-flow-completion.zsh
 
 # Customize to your needs...
-export PATH=:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/bin:$SCALA_HOME/bin:$GRAILS_HOME/bin::/opt/Wimp/bin:~/dev/android/sdk/tools:~/bk:/home/leif/apps/mule/bin:/home/leif/apps/jboss/bin:/home/leif/apps/soapui/bin:/home/leif/dev/groovy/grails/bin:/home/leif/dev/java/tools/cxf/bin
+export PATH=:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/bin:$SCALA_HOME/bin:$GRAILS_HOME/bin::/opt/Wimp/bin:~/dev/android/sdk/tools:~/bk:/home/leif/apps/mule/bin:/home/leif/apps/jboss/bin:/home/leif/apps/soapui/bin:/home/leif/dev/groovy/grails/bin:/home/leif/dev/java/tools/cxf/bin:/home/leif/apps/idea/bin
 
 alias ll='ls -l'
 alias la='ls -A'

@@ -22,7 +22,7 @@ fi
 #   Ensure the IDEA_HOME var for this script points to the
 #   home directory where IntelliJ IDEA is installed on your system.
 
-export IDEA_HOME=/home/leif/apps/idea-9732
+export IDEA_HOME=/home/leif/apps/idea
 export IDEA_BIN_HOME=$IDEA_HOME/bin
 
 
