@@ -1,0 +1,13 @@
+#!/bin/bash
+
+homestrip=$(echo $HOME | sed -e 's/\//\\\//g')
+
+dropbox stop
+rm -r ~/.dropbox-dist
+dropbox start -i
+
+echo "sleep 20 && dropbox start -i" | tee ~/.dropbox.sh
+chmod +x ~/.dropbox.sh
+
+sed -i "s/Exec=.*/Exec=$homestrip\/\.dropbox.sh/" ~/.config/autostart/dropbox.desktop
+chmod 555 ~/.config/autostart/dropbox.desktop
