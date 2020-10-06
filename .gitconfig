@@ -1,24 +1,38 @@
 [user]
 	name = Leif Jantzen
-	email = ljantzen@gmail.com
+	email = leif.jantzen@webstep.no
+[core]
+	pager = less -F -X
 [github]
 	user = ljantzen
-	token = d9cf7bac2f8cf27038d1ba31a4aeaafa
 [color]
     ui = true
     diff = auto
     status = auto
     branch = auto
 [alias]
-    ci = commit  
-    ca = commit -a -m 
+    m = checkout master
+    b = checkout -
+    br = branch
+    ci = commit
+    ca = commit -a -m
     st = status -u -s
     co = checkout
-    rv = reset --hard HEAD
-    pu = "!git fetch origin -v; git fetch upstream -v; git merge upstream/master"
-    lg = log --topo-order --decorate --first-parent
-    nofetch = fetch --dry-run
-	unstage = reset HEAD --
-	pop = "stash pop "
-[diff]
-    external=diff.py
+    ll = log --oneline
+    cb = checkout -b
+    nb = checkout -b
+    find = log --pickaxe-regex -p --color-words -S
+    fuckit = reset --hard HEAD
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    l4 = log -4 --color --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    l5 = log -5 --color --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    x5 = log -5 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+   
+    unstage = reset HEAD --
+    pop = "stash pop "
+    uncommit = reset --soft HEAD~1
+    unadd = reset HEAD
+    wip = commit -a -m wip
+    amend = commit -a --amend --no-edit
+[gc]
+	autoDetach = false
